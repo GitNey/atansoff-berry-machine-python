@@ -1,0 +1,2 @@
+# atansoff-berry-machine-python
+ystem of Linear Equations (Simultaneous Equations)  A system of linear equations is a collection of linear equations which involve the same set of variables.  For example: ``(     x + (2 * y) == 2,     -x + y == 1   )``System of equations with two variables: x and y.  possible solution: x = 0, y = 1  The solution to a linear system is an assignment of numbers to the variables that satisfy every equation in the system.  For a given system, we could have one solution, no solutions or infinitely many solutions.
