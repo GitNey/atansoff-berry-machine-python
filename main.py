@@ -26,14 +26,15 @@ if __name__ == '__main__':
   y = rands[1]
   print('Solving for...\nx: ' + str(x) + '\ny: ' + str(y) + '\n') # log next problem set
   
-  result = solve_for_system(x, y)
-  print('Testing for x: ' + str(result[0]) + ' and y: ' + str(result[0]))
-  while (result[0] != True or result[1] != True): # loop until termination, note: some sytems have no solutions...
-    rands = generate_rand_pair(lower_bound, upper_bound)
-    print('Attempting to find solution to system, testing:\n' + 'x: ' + str(x) + '\ny: ' + str(y) + '\n')
+  result = solve_for_system(x, y) # get new result tuple
+  print('Testing for x: ' + str(result[0]) + ' and y: ' + str(result[0])) # log test variables for info
+  while (result[0] != True or result[1] != True): # loop until termination, note: some systems have no solutions... (depends on output of solve_for_system(x, y))
+    rands = generate_rand_pair(lower_bound, upper_bound) # get pair of random ints in bounds
+    print('Attempting to find solution to system, testing:\n' + 'x: ' + str(x) + '\ny: ' + str(y) + '\n') # log next problem set
     x = rands[0]
-    y = rands[1]
-    result = solve_for_system(x, y)
+    y = rands[1] # assign x and y for simplicity
+    result = solve_for_system(x, y) # get new result tuple
+  # loop terminated, solution discovered
   print('Solution discovered!\n' + 'x: ' + str(x) + '\ny: ' + str(y) + '\n')
   print('Solution Tuple -> ' + str(result))
   
